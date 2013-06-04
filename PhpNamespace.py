@@ -24,7 +24,7 @@ class PhpNamespaceCommand(sublime_plugin.TextCommand):
             sublime.error_message("No .php extension")
             return
 
-        breakwords = [ "src", "lib", "tests"]
+        breakwords = [ "src", "lib", "tests", "private"]
         for breakword in breakwords:
             segment = os.sep + breakword + os.sep
             pos = filename.find(segment)
